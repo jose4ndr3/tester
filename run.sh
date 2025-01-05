@@ -1,9 +1,11 @@
 #! /bin/bash
 
+curr_dir=$(pwd)
+
 echo "HOSTNAME"
 hostnamectl
 
 echo "INTERFACE RED"
 ifconfig | grep inet
 
-sh /data/tester/ping.sh
+sh $curr_dir/ping.sh
