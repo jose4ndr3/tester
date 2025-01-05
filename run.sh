@@ -3,9 +3,9 @@
 curr_dir=$(pwd)
 
 echo "HOSTNAME"
-hostnamectl
+hostnamectl | grep 'Static hostname'
 
 echo "INTERFACE RED"
-ifconfig | grep inet
+ifconfig | grep -i inet | grep broadcast
 
 sh $curr_dir/ping.sh
